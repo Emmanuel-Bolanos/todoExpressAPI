@@ -3,7 +3,7 @@
 ## Assignment
 
 - [ ] Create an Express application to manage a TODO list
-  - [ ] GET     /todos
+  - [X] GET     /todos
   - [ ] POST    /todos
   - [ ] PUT     /todos/:id
   - [ ] DELETE  /todos:id

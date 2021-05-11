@@ -1,0 +1,34 @@
+{
+  "name": "todoExpressAPI",
+  "version": "1.0.0",
+  "description": "## Assignment",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon src/server.js",
+    "start": "pm2 start src/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Emmanuel-Bolanos/todoExpressAPI.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Emmanuel-Bolanos/todoExpressAPI/issues"
+  },
+  "homepage": "https://github.com/Emmanuel-Bolanos/todoExpressAPI#readme",
+  "dependencies": {
+    "dotenv": "^9.0.2",
+    "express": "^4.17.1",
+    "mysql": "^2.18.1"
+  },
+  "devDependencies": {
+    "eslint": "^7.26.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.22.1",
+    "nodemon": "^2.0.7",
+    "pm2": "^4.5.6"
+  }
+}

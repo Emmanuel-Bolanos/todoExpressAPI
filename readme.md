@@ -6,7 +6,7 @@
   - [X] GET     /todos
   - [ ] POST    /todos
   - [ ] PUT     /todos/:id
-  - [ ] DELETE  /todos:id
+  - [X] DELETE  /todos:id
 - [ ] Deploy the application in an AWS EC2 instance (use pm2)
   - [ ] Security groups:
   - [ ] Allow 443, 80 for 0.0.0.0

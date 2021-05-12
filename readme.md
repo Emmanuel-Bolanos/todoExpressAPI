@@ -4,7 +4,7 @@
 
 - [ ] Create an Express application to manage a TODO list
   - [X] GET     /todos
-  - [ ] POST    /todos
+  - [X] POST    /todos
   - [ ] PUT     /todos/:id
   - [X] DELETE  /todos:id
 - [ ] Deploy the application in an AWS EC2 instance (use pm2)

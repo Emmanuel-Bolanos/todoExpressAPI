@@ -11,6 +11,27 @@ module.exports = class TodoNote {
     return this.id;
   }
 
+  async isDuplicated() {
+    const db = await con();
+    let sqlQuery;
+    let result;
+
+    if (this.title && this.content && this.deadline) {
+      sqlQuery = 'SELECT * FROM todolist WHERE title = ? AND content = ? AND deadline = ?';
+      [result] = await db.query(sqlQuery, [this.title, this.content, this.deadline]);
+    } else if (this.title && this.content) {
+      sqlQuery = 'SELECT * FROM todolist WHERE title = ? AND content = ? AND deadline IS NULL';
+      [result] = await db.query(sqlQuery, [this.title, this.content]);
+    } else if (this.title && this.deadline) {
+      sqlQuery = 'SELECT * FROM todolist WHERE title = ? AND content IS NULL AND deadline = ?';
+      [result] = await db.query(sqlQuery, [this.title, this.deadline]);
+    } else {
+      sqlQuery = 'SELECT * FROM todolist WHERE title = ? AND content IS NULL AND deadline IS NULL';
+      [result] = await db.query(sqlQuery, [this.title]);
+    }
+    return (result.length > 0);
+  }
+
   async save() {
     const db = await con();
     const sqlQuery = `INSERT INTO todolist

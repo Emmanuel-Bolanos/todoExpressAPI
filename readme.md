@@ -7,12 +7,11 @@
   - [X] POST    /todos
   - [X] PUT     /todos/:id
   - [X] DELETE  /todos:id
-- [ ] Deploy the application in an AWS EC2 instance (use pm2)
-  - [ ] Security groups:
-  - [ ] Allow 443, 80 for 0.0.0.0
-  - [ ] Allow 22 for your IP address
-- [ ] Set a proxy pass using nginx
-- [ ] If you don´t have a domain, the application should be available via a virtual domain /etc/hosts
+- [X] Deploy the application in an AWS EC2 instance (use pm2)
+- [X] Security groups:
+  - [X] Allow 443, 80 for 0.0.0.0
+  - [X] Allow 22 for your IP address
+- [X] Set a proxy pass using nginx
 
 ## Delivery format
 

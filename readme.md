@@ -2,10 +2,10 @@
 
 ## Assignment
 
-- [ ] Create an Express application to manage a TODO list
+- [X] Create an Express application to manage a TODO list
   - [X] GET     /todos
   - [X] POST    /todos
-  - [ ] PUT     /todos/:id
+  - [X] PUT     /todos/:id
   - [X] DELETE  /todos:id
 - [ ] Deploy the application in an AWS EC2 instance (use pm2)
   - [ ] Security groups:

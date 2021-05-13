@@ -32,6 +32,12 @@ module.exports = class TodoNote {
     return (result.length > 0);
   }
 
+  async update() {
+    const db = await con();
+    const sqlQuery = 'UPDATE todolist SET title = ?, content = ?, deadline = ? WHERE id = ?';
+    await db.query(sqlQuery, [this.title, this.content, this.deadline, this.id]);
+  }
+
   async save() {
     const db = await con();
     const sqlQuery = `INSERT INTO todolist

@@ -6,7 +6,7 @@ const todoResources = express.Router();
 
 todoResources.get('/', todoControllers.getAll);
 todoResources.post('/', todoValidation.createTodo, todoControllers.createTodo);
-todoResources.put('/:id', todoControllers.updateTodo);
+todoResources.put('/:id', todoValidation.updateTodo, todoControllers.updateTodo);
 todoResources.delete('/:id', todoControllers.deleteTodo);
 
 module.exports = todoResources;

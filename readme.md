@@ -15,9 +15,9 @@
 
 ## Delivery format
 
-- [ ] Screenshot of Security Group
-- [ ] Link to repository
-- [ ] Nginx configuration
-- [ ] Screenshot of Pm2 running:
-  - [ ] list and monitor
-- [ ] Ip Address & Virtual domain
+- [X] Screenshot of Security Group
+- [X] Link to repository
+- [X] Nginx configuration
+- [X] Screenshot of Pm2 running:
+  - [X] list and monitor
+- [X] Ip Address & Virtual domain

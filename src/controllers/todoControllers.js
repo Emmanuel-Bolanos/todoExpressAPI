@@ -12,6 +12,27 @@ const getAll = async (req, res) => {
   }
 };
 
+const getTodo = async (req, res) => {
+  const id = Number(req.params.id);
+  try {
+    // get all todos
+    const todos = await TodoNote.getAll();
+    // search for the id given by the user
+    const toDo = todos.find((todo) => todo.id === id);
+    if (toDo) {
+      return res.status(200).send(toDo);
+    }
+    // send a not found if the id is not on the db
+    return res.status(404).send({
+      message: 'to-do note not found!',
+    });
+  } catch (err) {
+    return res.status(500).send({
+      message: 'Internal Server Error: please try again later',
+    });
+  }
+};
+
 const createTodo = async (req, res) => {
   const data = req.body;
   try {
@@ -104,6 +125,7 @@ const deleteTodo = async (req, res) => {
 
 module.exports = {
   getAll,
+  getTodo,
   createTodo,
   updateTodo,
   deleteTodo,
